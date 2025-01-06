@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'my_page.apps.MyPageConfig',
     'friends.apps.FriendsConfig',
-    'messages.apps.MessagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,10 +53,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'social_network.urls'
 
+TEMPLATES_DIR = BASE_DIR / 'templates'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
